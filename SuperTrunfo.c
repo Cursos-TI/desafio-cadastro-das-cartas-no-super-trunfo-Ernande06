@@ -3,23 +3,25 @@
 int main() {
 
     char estado;
-    char nomecidade[5];
+    char cod[10];
+    char nomecidade[50];
     int pop;
     float area;
-    float pib;
+    double pib;
     int pt;
 
     printf("========SUPER TRUNFO =========\n");
     printf("           ***              \n");
     printf("   CADASTRE SUA CARTA\n");
     
-    printf("\nDigite seu: \n");
-
     printf("\nEstado: ");    
     scanf("%c", &estado);
-
+    
+    printf("Digite o Código da Carta: ");
+    scanf("%s", cod);
+    
     printf("Cidade: ");
-    scanf("%s", &nomecidade);
+    scanf(" %[^\n]", nomecidade);
         
     printf("População: ");
     scanf("%d", &pop);
@@ -28,16 +30,13 @@ int main() {
     scanf("%f", &area);
 
     printf("PIB: ");
-    scanf("%f", &pib);
+    scanf("%lf", &pib);
 
     printf("Pontos Turisticos: ");
     scanf("%d", &pt);
 
     printf("=========================================\n");
-    printf("\n*Brasil*\n");
-    printf("\nCarta %c%s\nPopulação: %d milhões\nÁrea em Km²: %.3f\nPIB: %.3f milhões\nPontos Turisticos: %d aproximadamente. \n", estado, nomecidade, pop, area, pib, pt);
+    printf("\nEstado: %c\nCódigo da Carta: %s\nNome da Cidade: %s\nPopulação: %d milhões\nÁrea em Km²: %.3f\nPIB: %.2f milhões\nPontos Turisticos: %d aproximadamente. \n", estado, cod, nomecidade, pop, area, pib, pt);
     printf("\n=======================================\n");
-
-
 
 }
