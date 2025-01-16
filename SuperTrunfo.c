@@ -7,7 +7,7 @@ int main() {
     char nomecidade[50];
     int pop;
     float area;
-    double pib;
+    double pib, densidade, pibper;
     int pt;
 
     printf("========SUPER TRUNFO =========\n");
@@ -34,9 +34,13 @@ int main() {
 
     printf("Pontos Turisticos: ");
     scanf("%d", &pt);
+    
+    densidade = (double)(pop / area); 
+
+    pibper = (double)(pib / pop);
 
     printf("=========================================\n");
-    printf("\nEstado: %c\nCódigo da Carta: %s\nNome da Cidade: %s\nPopulação: %d milhões\nÁrea em Km²: %.3f\nPIB: %.2f milhões\nPontos Turisticos: %d aproximadamente. \n", estado, cod, nomecidade, pop, area, pib, pt);
+    printf("\nEstado: %c\nCódigo da Carta: %s\nNome da Cidade: %s\nPopulação: %d milhões\nÁrea em Km²: %.3f\nDensidade Populacional: %.2f pessoas/Km²\nPIB: R$ %.2f milhões\nPIB per capta: R$ %.2f reais\nPontos Turisticos: %d aproximadamente. \n", estado, cod, nomecidade, pop, area, densidade, pib, pibper, pt);
     printf("\n=======================================\n");
 
 }
