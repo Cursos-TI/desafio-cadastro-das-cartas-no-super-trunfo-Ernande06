@@ -81,11 +81,11 @@ int main() {
     //condições para calcular a comparação ( vitória, derrota ou empate )
     if(power1 > power2)
     {
-        printf("\nCarta %c%d Venceu!", estado1, cod1); 
+        printf("\nCarta %c%s Venceu!", estado1, cod1); 
 
     }else if (power1 < power2)
     {
-        printf("\nCarta %c%d Venceu!", estado2, cod2); 
+        printf("\nCarta %c%s Venceu!", estado2, cod2); 
     }else
     {
         printf("\nEMPATE");        
